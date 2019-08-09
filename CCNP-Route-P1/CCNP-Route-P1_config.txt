@@ -16,7 +16,7 @@
   router ospf 1
   router-id 5.5.5.5
   network 192.168.51.0 0.0.0.255 area 0
-  redistr connected
+  network 10.5.5.0 0.0.0.255 area 99
   exit
 
 !------ R1
@@ -38,13 +38,21 @@
   description Link to R3
   ip addr 192.168.13.1 255.255.255.0
   no shut
+  int f1/1
+  description Link to Ubuntu VM
+  ip addr 172.16.1.1 255.255.255.0
+  no shut
   exit
 
   router ospf 1
   router-id 1.1.1.1
-  network 192.168.15.0 0.0.0.255 area 0
+  network 192.168.51.0 0.0.0.255 area 0
   network 192.168.12.0 0.0.0.255 area 12
   network 192.168.13.0 0.0.0.255 area 13
+  exit
+
+  router ospf 1
+  area 13 virtual-link 3.3.3.3
   exit
 
 !------ R3
@@ -58,13 +66,19 @@
   description Link to R3
   ip addr 192.168.13.3 255.255.255.0
   no shut
+  int lo 1
+  ip addr 10.3.3.3 255.255.255.0
+  no shut
   exit
 
   router ospf 1
   router-id 3.3.3.3
   network 192.168.13.0 0.0.0.255 area 13
+  network 10.3.3.0 0.0.0.255 area 33
+  exit
 
-  area 13 1.1.1.1 virtual-link
+  router ospf 1
+  area 13 virtual-link 1.1.1.1
   exit
 
 !------ R2
@@ -87,13 +101,12 @@
   router ospf 1
   router-id 2.2.2.2
   network 192.168.12.0 0.0.0.255 area 12
-
-  area 12 1.1.1.1 virtual-link
   exit
 
   router eigrp 24
   eigrp router-id 2.2.2.2
-  network 192.168.14.0
+  no network 192.168.14.0
+  network 192.168.24.0
   exit
 
   router ospf 1
@@ -101,8 +114,12 @@
   exit
 
   router eigrp 24
-  default-metric 1 100000 1 100 255 1500
+  default-metric 100000 100 255 1 1500
   redistr ospf 1
+  exit
+
+  router ospf 1
+  area 12 1.1.1.1 virtual-link
   exit
 
 !------ R4
@@ -120,5 +137,5 @@
 
   router eigrp 24
   eigrp router-id 4.4.4.4
-  network 192.168.14.0
+  network 192.168.24.0
   exit
