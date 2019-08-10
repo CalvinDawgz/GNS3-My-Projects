@@ -1,0 +1,64 @@
+May 07 00:07:03.787 HYPERVISOR: Release 0.2.19-amd64/Linux (tag 2019011912)
+May 06 17:07:03.787 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 57737.
+May 06 17:07:03.794 HYPERVISOR: exec_cmd: hypervisor version 
+May 06 17:07:03.794 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips 
+May 06 17:07:03.794 GENERAL: working_dir=/home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips
+May 06 17:07:03.795 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips/e4803432-dbcb-441c-b022-1a7997025b7e 
+May 06 17:07:03.795 GENERAL: working_dir=/home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips/e4803432-dbcb-441c-b022-1a7997025b7e
+May 06 17:07:03.795 HYPERVISOR: exec_cmd: vm create R2 2 c7200 
+May 06 17:07:03.795 VM: VM R2 created.
+May 06 17:07:03.796 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5002 
+May 06 17:07:03.796 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+May 06 17:07:03.797 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:07:03.797 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+May 06 17:07:03.798 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+May 06 17:07:03.798 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:07:03.799 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60630338 
+May 06 17:07:03.800 HYPERVISOR: exec_cmd: vm set_ios R2 /home/calvin/GNS3/images/IOS/c1766.image 
+May 06 17:07:03.800 HYPERVISOR: exec_cmd: c7200 set_mac_addr R2 ca02.49ef.0000 
+May 06 17:07:03.801 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+May 06 17:07:03.801 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+May 06 17:07:03.802 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:07:03.802 HYPERVISOR: exec_cmd: vm slot_remove_binding R2 0 0 
+May 06 17:07:03.803 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:07:03.803 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-2FE 
+May 06 17:07:03.804 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:07:03.804 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-4T+ 
+May 06 17:07:04.557 HYPERVISOR: exec_cmd: nio create_udp udp-850c4989-f4fc-4519-b4f7-359b852c3559 10006 127.0.0.1 10007 
+May 06 17:07:04.775 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-850c4989-f4fc-4519-b4f7-359b852c3559 
+May 06 17:07:04.776 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:07:10.497 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+May 06 17:07:10.497 VM: VM Ghost created.
+May 06 17:07:10.500 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/calvin/GNS3/images/IOS/c1766.image 
+May 06 17:07:10.503 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+May 06 17:07:10.505 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips/c1766.image-512.ghost 
+May 06 17:07:10.506 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+May 06 17:07:10.509 HYPERVISOR: exec_cmd: vm get_status Ghost 
+May 06 17:07:10.510 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+May 06 17:07:10.510 HYPERVISOR: exec_cmd: vm start Ghost 
+May 06 17:07:10.913 HYPERVISOR: exec_cmd: vm get_status Ghost 
+May 06 17:07:10.913 HYPERVISOR: exec_cmd: vm stop Ghost 
+May 06 17:07:11.138 VM: VM Ghost shutdown.
+May 06 17:07:11.139 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+May 06 17:07:11.141 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+May 06 17:07:11.141 VM: VM Ghost destroyed.
+May 06 17:07:11.147 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+May 06 17:07:11.148 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips/c1766.image-512.ghost 
+May 06 17:07:11.149 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:07:11.151 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+May 06 17:07:11.152 HYPERVISOR: exec_cmd: vm start R2 
+May 06 17:07:41.385 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 06 17:41:41.539 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 06 17:41:46.781 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:41:46.783 HYPERVISOR: exec_cmd: vm stop R2 
+May 06 17:41:46.879 VM: VM R2 shutdown.
+May 06 17:41:46.880 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 06 17:41:50.523 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:41:50.526 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 06 17:41:50.848 HYPERVISOR: exec_cmd: vm get_status R2 
+May 06 17:41:50.848 HYPERVISOR: exec_cmd: vm extract_config R2 
+May 06 17:41:50.894 HYPERVISOR: exec_cmd: vm delete R2 
+May 06 17:41:50.894 VM: VM R2 destroyed.
+May 06 17:41:50.895 HYPERVISOR: exec_cmd: hypervisor stop 
+May 06 17:41:50.975 HYPERVISOR: Stopped.
+May 06 17:41:50.975 GENERAL: reset done.

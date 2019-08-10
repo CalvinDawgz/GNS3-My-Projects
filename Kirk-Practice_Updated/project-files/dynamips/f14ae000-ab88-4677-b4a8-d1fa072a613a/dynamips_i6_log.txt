@@ -1,0 +1,49 @@
+May 07 00:07:03.983 HYPERVISOR: Release 0.2.19-amd64/Linux (tag 2019011912)
+May 06 17:07:03.984 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 40883.
+May 06 17:07:03.986 HYPERVISOR: exec_cmd: hypervisor version 
+May 06 17:07:03.986 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips 
+May 06 17:07:03.986 GENERAL: working_dir=/home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips
+May 06 17:07:03.987 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips/20738238-8f12-4746-9990-377bf61de9e6 
+May 06 17:07:03.987 GENERAL: working_dir=/home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips/20738238-8f12-4746-9990-377bf61de9e6
+May 06 17:07:03.987 HYPERVISOR: exec_cmd: vm create R5 5 c7200 
+May 06 17:07:03.987 VM: VM R5 created.
+May 06 17:07:03.988 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5005 
+May 06 17:07:03.989 HYPERVISOR: exec_cmd: c7200 get_mac_addr R5 
+May 06 17:07:03.990 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:07:03.990 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-FE 
+May 06 17:07:03.991 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+May 06 17:07:03.992 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:07:03.993 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x60630338 
+May 06 17:07:03.994 HYPERVISOR: exec_cmd: vm set_ios R5 /home/calvin/GNS3/images/IOS/c1766.image 
+May 06 17:07:03.995 HYPERVISOR: exec_cmd: c7200 set_mac_addr R5 ca05.4a24.0000 
+May 06 17:07:03.996 HYPERVISOR: exec_cmd: vm set_nvram R5 512 
+May 06 17:07:03.996 HYPERVISOR: exec_cmd: vm set_ram R5 512 
+May 06 17:07:03.997 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:07:03.997 HYPERVISOR: exec_cmd: vm slot_remove_binding R5 0 0 
+May 06 17:07:03.998 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:07:03.998 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-2FE 
+May 06 17:07:03.998 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:07:03.999 HYPERVISOR: exec_cmd: vm slot_add_binding R5 1 0 PA-4T+ 
+May 06 17:07:05.674 HYPERVISOR: exec_cmd: nio create_udp udp-5c9d8e7e-f558-41aa-983b-c53b7d39622b 10018 127.0.0.1 10019 
+May 06 17:07:05.890 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-5c9d8e7e-f558-41aa-983b-c53b7d39622b 
+May 06 17:07:05.891 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:07:11.415 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+May 06 17:07:11.417 HYPERVISOR: exec_cmd: vm set_ghost_file R5 /home/calvin/GNS3/projects/Kirk-Practice/project-files/dynamips/c1766.image-512.ghost 
+May 06 17:07:11.418 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:07:11.420 HYPERVISOR: exec_cmd: vm set_config R5 configs/i5_startup-config.cfg configs/i5_private-config.cfg 
+May 06 17:07:11.421 HYPERVISOR: exec_cmd: vm start R5 
+May 06 17:07:41.644 HYPERVISOR: exec_cmd: vm extract_config R5 
+May 06 17:41:41.786 HYPERVISOR: exec_cmd: vm extract_config R5 
+May 06 17:41:46.926 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:41:46.927 HYPERVISOR: exec_cmd: vm stop R5 
+May 06 17:41:47.018 VM: VM R5 shutdown.
+May 06 17:41:47.020 HYPERVISOR: exec_cmd: vm extract_config R5 
+May 06 17:41:50.542 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:41:50.543 HYPERVISOR: exec_cmd: vm extract_config R5 
+May 06 17:41:50.967 HYPERVISOR: exec_cmd: vm get_status R5 
+May 06 17:41:50.968 HYPERVISOR: exec_cmd: vm extract_config R5 
+May 06 17:41:50.968 HYPERVISOR: exec_cmd: vm delete R5 
+May 06 17:41:50.968 VM: VM R5 destroyed.
+May 06 17:41:50.968 HYPERVISOR: exec_cmd: hypervisor stop 
+May 06 17:41:51.151 HYPERVISOR: Stopped.
+May 06 17:41:51.151 GENERAL: reset done.
