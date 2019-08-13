@@ -1,0 +1,48 @@
+Apr 29 13:59:44.076 HYPERVISOR: Release 0.2.19-amd64/Linux (tag 2019011912)
+Apr 29 06:59:44.076 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 40697.
+Apr 29 06:59:44.084 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 29 06:59:44.084 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/KirkSkills3/project-files/dynamips 
+Apr 29 06:59:44.084 GENERAL: working_dir=/home/calvin/GNS3/projects/KirkSkills3/project-files/dynamips
+Apr 29 06:59:44.084 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/KirkSkills3/project-files/dynamips/3bbdc009-2e12-45b1-a511-69ba19eeb338 
+Apr 29 06:59:44.084 GENERAL: working_dir=/home/calvin/GNS3/projects/KirkSkills3/project-files/dynamips/3bbdc009-2e12-45b1-a511-69ba19eeb338
+Apr 29 06:59:44.085 HYPERVISOR: exec_cmd: vm create R2 2 c7200 
+Apr 29 06:59:44.085 VM: VM R2 created.
+Apr 29 06:59:44.085 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5002 
+Apr 29 06:59:44.086 HYPERVISOR: exec_cmd: c7200 get_mac_addr R2 
+Apr 29 06:59:44.086 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 06:59:44.086 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-FE 
+Apr 29 06:59:44.087 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Apr 29 06:59:44.087 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 06:59:44.087 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60630338 
+Apr 29 06:59:44.088 HYPERVISOR: exec_cmd: vm set_ios R2 /home/calvin/GNS3/images/IOS/c1766.image 
+Apr 29 06:59:44.089 HYPERVISOR: exec_cmd: c7200 set_mac_addr R2 ca02.178a.0000 
+Apr 29 06:59:44.089 HYPERVISOR: exec_cmd: vm set_nvram R2 512 
+Apr 29 06:59:44.089 HYPERVISOR: exec_cmd: vm set_ram R2 512 
+Apr 29 06:59:44.090 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 06:59:44.090 HYPERVISOR: exec_cmd: vm slot_remove_binding R2 0 0 
+Apr 29 06:59:44.090 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 06:59:44.090 HYPERVISOR: exec_cmd: vm slot_add_binding R2 0 0 C7200-IO-2FE 
+Apr 29 06:59:44.091 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 06:59:44.091 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 PA-4T+ 
+Apr 29 06:59:44.674 HYPERVISOR: exec_cmd: nio create_udp udp-9348b5da-e70c-47d1-aee0-bfd405eaecae 10006 127.0.0.1 10007 
+Apr 29 06:59:44.890 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-9348b5da-e70c-47d1-aee0-bfd405eaecae 
+Apr 29 06:59:44.891 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 06:59:53.326 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Apr 29 06:59:53.328 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /home/calvin/GNS3/projects/KirkSkills3/project-files/dynamips/c1766.image-512.ghost 
+Apr 29 06:59:53.329 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 06:59:53.331 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Apr 29 06:59:53.332 HYPERVISOR: exec_cmd: vm start R2 
+Apr 29 07:51:23.803 HYPERVISOR: exec_cmd: vm extract_config R2 
+Apr 29 07:51:26.287 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 07:51:26.292 HYPERVISOR: exec_cmd: vm stop R2 
+Apr 29 07:51:26.420 VM: VM R2 shutdown.
+Apr 29 07:51:26.423 HYPERVISOR: exec_cmd: vm extract_config R2 
+Apr 29 07:51:29.484 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 07:51:29.487 HYPERVISOR: exec_cmd: vm extract_config R2 
+Apr 29 07:51:29.548 HYPERVISOR: exec_cmd: vm get_status R2 
+Apr 29 07:51:29.548 HYPERVISOR: exec_cmd: vm extract_config R2 
+Apr 29 07:51:29.594 HYPERVISOR: exec_cmd: vm delete R2 
+Apr 29 07:51:29.594 VM: VM R2 destroyed.
+Apr 29 07:51:29.595 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 29 07:51:29.845 HYPERVISOR: Stopped.
+Apr 29 07:51:29.845 GENERAL: reset done.

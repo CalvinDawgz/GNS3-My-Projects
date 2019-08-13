@@ -1,0 +1,38 @@
+May 17 16:44:02.006 HYPERVISOR: Release 0.2.19-amd64/Linux (tag 2019011912)
+May 17 09:44:02.006 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49669.
+May 17 09:44:02.015 HYPERVISOR: exec_cmd: hypervisor version 
+May 17 09:44:02.015 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/ccna-securityPrep/project-files/dynamips 
+May 17 09:44:02.015 GENERAL: working_dir=/home/calvin/GNS3/projects/ccna-securityPrep/project-files/dynamips
+May 17 09:44:02.015 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/ccna-securityPrep/project-files/dynamips/360d8491-1748-4d9f-9a36-ffd64f3debd2 
+May 17 09:44:02.015 GENERAL: working_dir=/home/calvin/GNS3/projects/ccna-securityPrep/project-files/dynamips/360d8491-1748-4d9f-9a36-ffd64f3debd2
+May 17 09:44:02.016 HYPERVISOR: exec_cmd: vm create Security 4 c7200 
+May 17 09:44:02.016 VM: VM Security created.
+May 17 09:44:02.016 HYPERVISOR: exec_cmd: vm set_con_tcp_port Security 5004 
+May 17 09:44:02.016 HYPERVISOR: exec_cmd: c7200 get_mac_addr Security 
+May 17 09:44:02.016 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:44:02.017 HYPERVISOR: exec_cmd: vm slot_add_binding Security 0 0 C7200-IO-FE 
+May 17 09:44:02.017 HYPERVISOR: exec_cmd: vm set_disk0 Security 0 
+May 17 09:44:02.017 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:44:02.017 HYPERVISOR: exec_cmd: vm set_idle_pc Security 0x60630338 
+May 17 09:44:02.018 HYPERVISOR: exec_cmd: vm set_ios Security /home/calvin/GNS3/images/IOS/c1766.image 
+May 17 09:44:02.018 HYPERVISOR: exec_cmd: c7200 set_mac_addr Security ca04.20ee.0000 
+May 17 09:44:02.018 HYPERVISOR: exec_cmd: vm set_nvram Security 512 
+May 17 09:44:02.018 HYPERVISOR: exec_cmd: vm set_ram Security 512 
+May 17 09:44:02.018 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:44:02.018 HYPERVISOR: exec_cmd: vm slot_remove_binding Security 0 0 
+May 17 09:44:02.019 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:44:02.019 HYPERVISOR: exec_cmd: vm slot_add_binding Security 0 0 C7200-IO-2FE 
+May 17 09:44:02.019 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:44:02.019 HYPERVISOR: exec_cmd: vm slot_add_binding Security 1 0 PA-4T+ 
+May 17 09:44:02.991 HYPERVISOR: exec_cmd: nio create_udp udp-731519e6-d60a-48ea-96d4-89d182112f44 10016 127.0.0.1 10017 
+May 17 09:44:03.202 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Security 0 0 udp-731519e6-d60a-48ea-96d4-89d182112f44 
+May 17 09:44:03.202 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:46:40.001 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:46:40.003 HYPERVISOR: exec_cmd: vm extract_config Security 
+May 17 09:46:40.312 HYPERVISOR: exec_cmd: vm get_status Security 
+May 17 09:46:40.312 HYPERVISOR: exec_cmd: vm extract_config Security 
+May 17 09:46:40.358 HYPERVISOR: exec_cmd: vm delete Security 
+May 17 09:46:40.358 VM: VM Security destroyed.
+May 17 09:46:40.359 HYPERVISOR: exec_cmd: hypervisor stop 
+May 17 09:46:40.720 HYPERVISOR: Stopped.
+May 17 09:46:40.720 GENERAL: reset done.
