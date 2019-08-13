@@ -563,6 +563,11 @@
                             "type": "ethernet"
                         },
                         {
+                            "name": "Ethernet 2",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
                             "name": "vEthernet (Default Switch)",
                             "special": true,
                             "type": "ethernet"
@@ -585,11 +590,6 @@
                         {
                             "name": "vEthernet (Internal-Switch)",
                             "special": true,
-                            "type": "ethernet"
-                        },
-                        {
-                            "name": "Ethernet 5",
-                            "special": false,
                             "type": "ethernet"
                         },
                         {
