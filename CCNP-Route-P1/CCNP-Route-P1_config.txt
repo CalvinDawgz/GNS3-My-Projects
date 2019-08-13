@@ -49,6 +49,7 @@
   network 192.168.51.0 0.0.0.255 area 0
   network 192.168.12.0 0.0.0.255 area 12
   network 192.168.13.0 0.0.0.255 area 13
+  network 172.16.1.0 0.0.0.255 area 0
   exit
 
   router ospf 1
