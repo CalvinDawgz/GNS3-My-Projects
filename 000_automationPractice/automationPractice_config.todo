@@ -1,0 +1,118 @@
+To implement:
+  ☐ Verify Interface references are correct
+  ☐ OSPF / EIGRP domains
+  ☐ BGP
+  ☐ PBR
+  ☐ Authentication
+  ☐ GRE tunnels
+
+!----------------------------------------------------- R6
+
+hostname R6
+
+line con 0
+exec-timeout 0
+logging sync
+exit
+
+no ip domain-lookup
+
+int f0/0
+description Link to WAN
+ip addr 192.168.16.6 255.255.255.0
+no shut
+int lo 0
+description BGP source
+ip addr 10.56.56.6 255.255.255.0
+exit
+
+
+!----------------------------------------------------- R1
+
+hostname R1
+
+line con 0
+exec-timeout 0
+logging sync
+exit
+
+no ip domain-lookup
+
+int f0/0
+description link to Branch A
+ip addr 192.168.16.1 255.255.255.0
+no shut
+int f1/0
+description link to ISP-2
+ip addr 192.168.12.1 255.255.255.0
+no shut
+int f1/1
+descripiton link to ISP-3
+ip addr 192.168.13.1 255.255.255.0
+no shut
+exit
+
+!----------------------------------------------------- R2
+
+hostname R2
+
+line con 0
+exec-timeout 0
+logging sync
+exit
+
+no ip domain-lookup
+
+int f1/0
+description link to Enterprise A
+ip addr 192.168.12.2 255.255.255.0
+no shut
+int f0/0
+descripiton link to Enterprise B
+ip addr 192.168.24.2 255.255.255.0
+no shut
+exit
+
+!----------------------------------------------------- R3
+
+hostname R3
+
+line con 0
+exec-timeout 0
+logging sync
+exit
+
+no ip domain-lookup
+
+int f1/1
+descripiton link to Enterprise A
+ip addr 192.168.13.3 255.255.255.0
+no shut
+int f0/0
+descripiton link to Enterprise B
+ip addr 192.168.34.3 255.255.255.0
+no shut
+exit
+
+
+!----------------------------------------------------- R4
+
+hostname R4
+
+line con 0
+exec-timeout 0
+logging sync
+exit
+
+no ip domain-lookup
+
+!----------------------------------------------------- R5
+
+hostname R5
+
+line con 0
+exec-timeout 0
+logging sync
+exit
+
+no ip domain-lookup
