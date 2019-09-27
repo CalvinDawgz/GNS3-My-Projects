@@ -1,0 +1,113 @@
+# EIGRP & PBR
+
+!--------------------- R5
+int f0/0
+ip addr 192.168.15.5 255.255.255.0
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+network 192.168.15.0
+exit
+
+
+!--------------------- R1
+int f0/0
+ip addr 172.16.12.1 255.255.255.0
+no shut
+int f0/1
+ip addr 172.16.13.1 255.255.255.0
+no shut
+int f1/0
+ip addr 192.168.15.1 255.255.255.0
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+eigrp router-id 1.1.1.1
+network 172.16.12.0
+network 172.16.13.0
+network 192.168.15.0
+exit
+
+router eigrp 100
+variance 2
+exit
+
+# not copied
+
+ip access-list extended PBR
+permit ip any 10.4.4.0 0.0.0.255
+exit
+
+route-map PBR-MAP permit 10
+match ip addr PBR
+set ip next-hop 172.16.13.3
+exit
+
+int f1/0
+ip policy route-map PBR-MAP
+exit
+
+!--------------------- R2
+int f0/0
+ip addr 172.16.12.2 255.255.255.0
+no shut
+int f0/1
+ip addr 172.16.24.2 255.255.255.0
+no shut
+exit
+
+router eigrp 100
+no auto-summary
+eigrp router-id 2.2.2.2
+network 172.16.12.0
+network 172.16.24.0
+exit
+
+
+!--------------------- R3
+int f0/1
+ip addr 172.16.13.3 255.255.255.0
+no shut
+int f0/0
+ip addr 172.16.34.3 255.255.255.0
+no shut
+exit
+
+ip access-list standard OFFSET
+permit 10.4.4.0 0.0.0.255
+exit
+
+router eigrp 100
+no auto-summary
+eigrp router-id 3.3.3.3
+network 172.16.34.0
+network 172.16.13.0
+
+offset-list OFFSET out 100
+exit
+
+
+!--------------------- R4
+int f0/0
+ip addr 172.16.34.4 255.255.255.0
+no shut
+int f0/1
+ip addr 172.16.24.4 255.255.255.0
+no shut
+exit
+
+int lo 0
+ip addr 10.4.4.4 255.255.255.0
+exit
+
+router eigrp 100
+no auto-summary
+eigrp router-id 4.4.4.4
+network 172.16.24.0
+network 172.16.34.0
+network 10.4.4.0
+exit
