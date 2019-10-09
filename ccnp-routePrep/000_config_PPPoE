@@ -1,0 +1,44 @@
+# Frame Relay & PPPoE
+
+!--------------------- R1
+
+int f0/0
+no ip addr 192.168.1.1 255.255.255.0
+encap frame
+frame map id 192.168.1.2 dlci 12
+no shut
+exit
+
+int dialer 1
+ppp auth ppp
+ip addr 192.168.1.1 255.255.255.0
+ppp chap hostname Customer1
+ppp chap password Customer 1
+dialer pool 1
+int f0/0
+pppoe-client dialer-pool-number 1
+exit
+
+
+
+!--------------------- R2
+
+int f0/0
+no ip addr 192.168.1.2 255.255.255.0
+encap frame
+frame map ip 192.168.1.1 dlci 12
+no shut
+exit
+
+username Customer1 password Customer1
+
+bba-group pppoe CUST1
+virtual-template 1
+exit
+
+interface virtual-template 1
+encap ppp
+ppp authentication chap callin
+int f0/0
+pppoe enable group CUST1
+exit
