@@ -1,0 +1,154 @@
+!--------------------------------------------------------- R1
+
+config t
+
+ipv6 unicast-routing
+
+int s3/0
+ipv6 addr 2026::12:1/122
+no shut
+exit
+
+ipv6 router ospf 6
+router-id 1.1.1.1
+Exit
+
+int s3/0
+ipv6 ospf 6 area 12
+exit
+
+
+
+!--------------------------------------------------------- R2
+
+
+config t
+
+ipv6 unicast-routing
+
+int s3/0
+ipv6 addr 2026::12:2/122
+no shut
+int s3/1
+ipv6 addr 2026::1:1/122
+no shut
+exit
+
+ipv6 router ospf 6
+router-id 2.2.2.2
+Exit
+
+int s3/1
+ipv6 ospf 6 area 0
+int s3/0
+ipv6 ospf 6 area 12
+exit
+
+
+!--------------------------------------------------------- R3
+
+config t
+
+ipv6 unicast-routing
+
+int s3/0
+ip addr 10.1.1.9 255.255.255.252
+no shut
+int s3/1
+ipv6 addr 2026::1:2/122
+no shut
+exit
+
+int t1
+ipv6 addr 2026::34:1/122
+tunnel source s3/0
+tunnel destination 10.1.1.10
+exit
+
+ipv6 router ospf 6
+router-id 3.3.3.3
+Exit
+
+int t1
+ipv6 ospf 6 area 34
+int s3/1
+ipv6 ospf 6 area 0
+exit
+
+!--------------------------------------------------------- R4
+
+config t
+
+ipv6 unicast-routing
+
+int f0/1
+ipv6 addr 2026::2:1/122
+no shut
+int s3/0
+ip addr 10.1.1.10 255.255.255.252
+no shut
+exit
+
+int t1
+ipv6 addr 2026::34:2/122
+tunnel source s3/0
+tunnel destination 10.1.1.9
+exit
+
+ipv6 router rip RIP_ZONE
+redistribute ospf 6 metric 10 include-connected
+exit
+
+int f0/1
+ipv6 rip RIP_ZONE enable
+exit
+
+ipv6 router ospf 6
+router-id 4.4.4.4
+Exit
+
+int t1
+ipv6 ospf 6 area 34
+exit
+
+
+!--------------------------------------------------------- R5
+
+config t
+
+ipv6 unicast-routing
+
+int f0/0
+ipv6 addr 2026::3:1/122
+no shut
+int f0/1
+ipv6 addr 2026::2:2/122
+no shut
+exit
+
+ipv6 router rip RIP_ZONE
+exit
+
+int f0/0
+ipv6 rip RIP_ZONE enable
+int f0/1
+ipv6 rip RIP_ZONE enable
+exit
+
+!--------------------------------------------------------- R6
+
+config t
+
+ipv6 unicast-routing
+
+int f0/0
+ipv6 addr 2026::3:2/122
+no shut
+exit
+
+ipv6 router rip RIP_ZONE
+exit
+
+int f0/0
+ipv6 rip RIP_ZONE enable
+exit
