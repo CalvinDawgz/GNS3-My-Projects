@@ -1,3 +1,10 @@
+Tasks:
+ ☐ Identify how to connect to GNS3 hosts (Localhost and port #)
+ ☐ Identify how to apply configuration, but remain idemnpotent
+ ☐ Integrate Ansible vault (Username & PW)
+ ☐ Use Genie for change verification
+  ☐ Build testbed file
+
 To implement:
   ☐ Verify Interface references are correct
   ☐ OSPF / EIGRP domains

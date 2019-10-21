@@ -1,0 +1,27 @@
+---
+all:
+  children:
+    routers:
+      R1:
+        ansible_port: 5000
+        ansible_host: 127.0.0.1
+
+      R2:
+        ansible_port: 5001
+        ansible_host: 127.0.0.1
+
+      R3:
+        ansible_port: 5002
+        ansible_host: 127.0.0.1
+
+      R4:
+        ansible_port: 5003
+        ansible_host: 127.0.0.1
+
+      R5:
+        ansible_port: 5004
+        ansible_host: 127.0.0.1
+
+      R6:
+        ansible_port: 5005
+        ansible_host: 127.0.0.1
