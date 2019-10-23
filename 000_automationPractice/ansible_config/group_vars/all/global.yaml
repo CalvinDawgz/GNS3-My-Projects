@@ -1,0 +1,19 @@
+---
+baselines:
+    baseline: baseline.j2
+    access: access.j2
+    distribution: distribution.j2
+    core: core.j2
+
+global:
+  hostname: "{{ inventory_hostname }}"
+  enable: test
+  username: admin
+  adminpass: adminpass
+  syslog:
+    - 192.168.1.1
+    - 192.168.1.2
+  ntpkey: '123$%^abc'
+  ntpserver:
+    - 192.168.2.1
+    - 192.168.2.2
