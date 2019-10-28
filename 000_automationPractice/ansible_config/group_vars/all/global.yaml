@@ -1,4 +1,7 @@
 ---
+
+# Ansible vault pass: abcd1234
+
 baselines:
     baseline: baseline.j2
     access: access.j2
@@ -8,12 +11,12 @@ baselines:
 global:
   hostname: "{{ inventory_hostname }}"
   enable: test
-  username: admin
-  adminpass: adminpass
+  username: "{{ vault.username }}"
+  adminpass: "{{ vault.adminpass }}"
   syslog:
     - 192.168.1.1
     - 192.168.1.2
-  ntpkey: '123$%^abc'
+  ntpkey: "{{ vault.ntpkey }}"
   ntpserver:
     - 192.168.2.1
     - 192.168.2.2
