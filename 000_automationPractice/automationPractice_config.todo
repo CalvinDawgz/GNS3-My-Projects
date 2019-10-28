@@ -1,7 +1,8 @@
 Tasks:
- ☐ Identify how to connect to GNS3 hosts (Localhost and port #)
  ☐ Identify how to apply configuration, but remain idemnpotent
- ☐ Integrate Ansible vault (Username & PW)
+   ☐ Store all role configs in the staging folder under the correct directory; have assemble task combine into final config
+   ☐ Create 3 phase roles (Pre, main, post); in post role, should execute the assemble task
+ ✔ Integrate Ansible vault (Username & PW) @done(2019-10-28 07:12) @project(Tasks)
  ☐ Use Genie for change verification
   ☐ Build testbed file
 
