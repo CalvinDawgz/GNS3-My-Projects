@@ -1,0 +1,7 @@
+---
+# tasks file for baseline
+
+- name: Generate baseline j2 template
+  template:
+    src: "{{ baselines.baseline }}"
+    dest: ./staging/{{ inventory_hostname }}/{{ inventory_hostname }}_baseline.cfg

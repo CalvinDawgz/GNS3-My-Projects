@@ -1,0 +1,9 @@
+---
+# tasks file for main_role
+
+- name: Create Template storage directory within the staging directory
+  file: path=./staging/{{ inventory_hostname }}/ state=directory
+
+- name: Generate configuration
+  include_role:
+    name: baseline
