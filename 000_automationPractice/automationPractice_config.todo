@@ -1,9 +1,11 @@
 Tasks:
- ☐ Identify how to apply configuration, but remain idemnpotent
+ ☐ Ansible Templating
    ✔ Store all role configs in the staging folder under the correct directory; have assemble task combine into final config @done(2019-10-29 07:15) @project(Tasks)
    ✔ Create 3 phase roles (Pre, main, post); in post role, should execute the assemble task @done(2019-10-29 07:15) @project(Tasks)
-   ☐ Create separate top-level yaml files for the various tiers of devices for host-specific plays
+   ✔ Create separate top-level yaml files for the various tiers of devices for host-specific plays @done(2019-11-05 06:39) @project(Tasks)
  ✔ Integrate Ansible vault (Username & PW) @done(2019-10-28 07:12) @project(Tasks)
+ ☐ Integrating Genie parser w/ Ansible
+  ☐ Use Genie to aid in config verification for Ansible to apply changes
  ☐ Use Genie for change verification
   ☐ Build testbed file
 
