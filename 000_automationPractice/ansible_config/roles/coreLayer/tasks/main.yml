@@ -1,4 +1,0 @@
----
-# tasks file for coreLayer
-- name: Testing
-  ping: 
