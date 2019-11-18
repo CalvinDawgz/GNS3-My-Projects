@@ -112,7 +112,7 @@
             },
             {
                 "filters": {},
-                "link_id": "a29f70a9-dcce-498d-a12a-f96be90f179a",
+                "link_id": "3040f274-f03c-4d63-ab79-ed25fac7b3ba",
                 "nodes": [
                     {
                         "adapter_number": 0,
@@ -121,7 +121,7 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e2",
                             "x": 75,
-                            "y": 20
+                            "y": 16
                         },
                         "node_id": "158ae2cd-de0f-4b97-b0b8-715b06f229bc",
                         "port_number": 2
@@ -133,7 +133,7 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "e0",
                             "x": -7,
-                            "y": 25
+                            "y": 28
                         },
                         "node_id": "21ef6fb4-c809-4938-91ef-30f2fa71bf5e",
                         "port_number": 0
@@ -291,7 +291,7 @@
                 "port_segment_size": 0,
                 "properties": {
                     "acpi_shutdown": false,
-                    "adapter_type": "e1000",
+                    "adapter_type": "default",
                     "adapters": 1,
                     "headless": false,
                     "linked_clone": false,
@@ -300,8 +300,8 @@
                 },
                 "symbol": ":/symbols/vmware_guest.svg",
                 "width": 65,
-                "x": 123,
-                "y": -163,
+                "x": 153,
+                "y": -183,
                 "z": 0
             },
             {
@@ -376,8 +376,8 @@
                 },
                 "symbol": ":/symbols/ethernet_switch.svg",
                 "width": 72,
-                "x": -42,
-                "y": -153,
+                "x": -12,
+                "y": -173,
                 "z": 0
             }
         ]
