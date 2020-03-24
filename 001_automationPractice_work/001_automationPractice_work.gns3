@@ -114,7 +114,7 @@
         "nodes": [
             {
                 "compute_id": "local",
-                "console": 5002,
+                "console": 5000,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 32,
@@ -224,7 +224,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5001,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 45,
@@ -288,7 +288,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5001,
+                "console": 5002,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 45,
