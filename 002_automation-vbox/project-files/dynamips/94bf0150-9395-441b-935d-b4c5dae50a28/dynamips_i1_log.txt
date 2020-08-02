@@ -1,0 +1,43 @@
+Aug 02 05:01:26.102 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Aug 02 05:01:26.102 HYPERVISOR: Started on IP = localhost, TCP port = 38373.
+Aug 02 05:01:26.107 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 02 05:01:26.107 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/GNS3-My-Projects/002_automation-vbox/project-files/dynamips 
+Aug 02 05:01:26.107 GENERAL: working_dir=/home/calvin/GNS3/projects/GNS3-My-Projects/002_automation-vbox/project-files/dynamips
+Aug 02 05:01:26.108 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/GNS3-My-Projects/002_automation-vbox/project-files/dynamips/94bf0150-9395-441b-935d-b4c5dae50a28 
+Aug 02 05:01:26.108 GENERAL: working_dir=/home/calvin/GNS3/projects/GNS3-My-Projects/002_automation-vbox/project-files/dynamips/94bf0150-9395-441b-935d-b4c5dae50a28
+Aug 02 05:01:26.108 HYPERVISOR: exec_cmd: vm create R1 1 c7200 
+Aug 02 05:01:26.108 VM: VM R1 created.
+Aug 02 05:01:26.108 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Aug 02 05:01:26.108 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Aug 02 05:01:26.108 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:01:26.108 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Aug 02 05:01:26.109 HYPERVISOR: exec_cmd: vm set_disk0 R1 32 
+Aug 02 05:01:26.109 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:01:26.109 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x60630d30 
+Aug 02 05:01:26.109 HYPERVISOR: exec_cmd: vm set_ios R1 /home/calvin/GNS3/images/IOS/c1766.image 
+Aug 02 05:01:26.110 HYPERVISOR: exec_cmd: c7200 set_mac_addr R1 ca01.e794.0000 
+Aug 02 05:01:26.110 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Aug 02 05:01:26.110 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Aug 02 05:01:26.110 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:01:26.110 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Aug 02 05:01:26.110 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:01:26.111 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Aug 02 05:01:26.111 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:01:26.111 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Aug 02 05:01:33.919 HYPERVISOR: exec_cmd: nio create_udp udp-6b3beca9-dc81-4a21-9fed-a8b4e9f115a0 10006 127.0.0.1 10007 
+Aug 02 05:01:34.130 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-6b3beca9-dc81-4a21-9fed-a8b4e9f115a0 
+Aug 02 05:01:34.130 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:01:49.535 HYPERVISOR: exec_cmd: nio create_udp udp-ee99738d-cb1e-4932-b829-b39bc53b3400 10016 127.0.0.1 10017 
+Aug 02 05:01:49.536 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-ee99738d-cb1e-4932-b829-b39bc53b3400 
+Aug 02 05:01:49.536 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:01:55.669 HYPERVISOR: exec_cmd: nio create_udp udp-d80cd6e3-f343-410d-9454-835ae7296c72 10028 127.0.0.1 10029 
+Aug 02 05:01:55.670 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 1 udp-d80cd6e3-f343-410d-9454-835ae7296c72 
+Aug 02 05:01:55.670 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:02:02.375 HYPERVISOR: exec_cmd: vm set_ios R1 /home/calvin/GNS3/images/IOS/c1766.image 
+Aug 02 05:05:27.268 HYPERVISOR: exec_cmd: vm get_status R1 
+Aug 02 05:05:27.268 HYPERVISOR: exec_cmd: vm extract_config R1 
+Aug 02 05:05:27.268 HYPERVISOR: exec_cmd: vm delete R1 
+Aug 02 05:05:27.268 VM: VM R1 destroyed.
+Aug 02 05:05:27.269 HYPERVISOR: exec_cmd: hypervisor stop 
+Aug 02 05:05:27.354 HYPERVISOR: Stopped.
+Aug 02 05:05:27.354 GENERAL: reset done.
