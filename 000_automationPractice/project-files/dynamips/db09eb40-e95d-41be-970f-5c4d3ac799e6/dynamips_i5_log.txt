@@ -1,0 +1,33 @@
+Aug 02 04:53:34.653 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Aug 02 04:53:34.653 HYPERVISOR: Started on IP = localhost, TCP port = 52575.
+Aug 02 04:53:34.661 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 02 04:53:34.661 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/GNS3-My-Projects/000_automationPractice/project-files/dynamips 
+Aug 02 04:53:34.661 GENERAL: working_dir=/home/calvin/GNS3/projects/GNS3-My-Projects/000_automationPractice/project-files/dynamips
+Aug 02 04:53:34.661 HYPERVISOR: exec_cmd: hypervisor working_dir /home/calvin/GNS3/projects/GNS3-My-Projects/000_automationPractice/project-files/dynamips/f3df9f4a-9f66-48ff-b961-4bc5dc20f0e5 
+Aug 02 04:53:34.661 GENERAL: working_dir=/home/calvin/GNS3/projects/GNS3-My-Projects/000_automationPractice/project-files/dynamips/f3df9f4a-9f66-48ff-b961-4bc5dc20f0e5
+Aug 02 04:53:34.661 HYPERVISOR: exec_cmd: vm create R3 3 c7200 
+Aug 02 04:53:34.661 VM: VM R3 created.
+Aug 02 04:53:34.661 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5002 
+Aug 02 04:53:34.662 HYPERVISOR: exec_cmd: c7200 get_mac_addr R3 
+Aug 02 04:53:34.662 HYPERVISOR: exec_cmd: vm get_status R3 
+Aug 02 04:53:34.662 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-FE 
+Aug 02 04:53:34.662 HYPERVISOR: exec_cmd: vm set_disk0 R3 512 
+Aug 02 04:53:34.662 HYPERVISOR: exec_cmd: vm get_status R3 
+Aug 02 04:53:34.662 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x60186e04 
+Aug 02 04:53:34.663 HYPERVISOR: exec_cmd: vm set_ios R3 /home/calvin/GNS3/images/IOS/c1766.image 
+Aug 02 04:53:34.663 HYPERVISOR: exec_cmd: c7200 set_mac_addr R3 ca03.180c.0000 
+Aug 02 04:53:34.663 HYPERVISOR: exec_cmd: vm set_nvram R3 512 
+Aug 02 04:53:34.664 HYPERVISOR: exec_cmd: vm set_ram R3 512 
+Aug 02 04:53:34.664 HYPERVISOR: exec_cmd: vm get_status R3 
+Aug 02 04:53:34.664 HYPERVISOR: exec_cmd: vm slot_remove_binding R3 0 0 
+Aug 02 04:53:34.664 HYPERVISOR: exec_cmd: vm get_status R3 
+Aug 02 04:53:34.664 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-2FE 
+Aug 02 04:53:34.665 HYPERVISOR: exec_cmd: vm get_status R3 
+Aug 02 04:53:34.665 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 PA-2FE-TX 
+Aug 02 04:53:34.729 HYPERVISOR: exec_cmd: vm get_status R3 
+Aug 02 04:53:34.730 HYPERVISOR: exec_cmd: vm extract_config R3 
+Aug 02 04:53:34.730 HYPERVISOR: exec_cmd: vm delete R3 
+Aug 02 04:53:34.730 VM: VM R3 destroyed.
+Aug 02 04:53:34.730 HYPERVISOR: exec_cmd: hypervisor stop 
+Aug 02 04:53:35.161 HYPERVISOR: Stopped.
+Aug 02 04:53:35.161 GENERAL: reset done.
