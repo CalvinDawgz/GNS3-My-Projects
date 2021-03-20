@@ -234,6 +234,37 @@
                     }
                 ],
                 "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "0b624a4a-887f-47ae-aa4b-218483fe6748",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 5,
+                            "y": 0
+                        },
+                        "node_id": "419ea5d9-4dc3-4dbf-9baf-2c1106d36c66",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e3",
+                            "x": 62,
+                            "y": 45
+                        },
+                        "node_id": "e43e1524-fa71-4569-a4ba-c956046d3a61",
+                        "port_number": 3
+                    }
+                ],
+                "suspend": false
             }
         ],
         "nodes": [
@@ -302,8 +333,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "7b3da998-c4c4-4037-b056-078523d344e8",
                 "width": 66,
-                "x": -209,
-                "y": -141,
+                "x": -211,
+                "y": -143,
                 "z": 1
             },
             {
@@ -371,8 +402,8 @@
                 "symbol": ":/symbols/router.svg",
                 "template_id": "7b3da998-c4c4-4037-b056-078523d344e8",
                 "width": 66,
-                "x": 52,
-                "y": -237,
+                "x": 51,
+                "y": -236,
                 "z": 1
             },
             {
@@ -441,7 +472,7 @@
                 "template_id": "7b3da998-c4c4-4037-b056-078523d344e8",
                 "width": 66,
                 "x": 62,
-                "y": -7,
+                "y": -8,
                 "z": 1
             },
             {
@@ -559,14 +590,53 @@
                 "symbol": ":/symbols/vbox_guest.svg",
                 "template_id": "2dbbc182-f049-4faa-9508-7caba26522b4",
                 "width": 65,
-                "x": 499,
-                "y": -148,
+                "x": 483,
+                "y": -152,
+                "z": 1
+            },
+            {
+                "compute_id": "local",
+                "console": null,
+                "console_auto_start": false,
+                "console_type": "none",
+                "custom_adapters": [],
+                "first_port_name": "",
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "iPxe_testing-1",
+                    "x": -15,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "iPxe_testing-1",
+                "node_id": "419ea5d9-4dc3-4dbf-9baf-2c1106d36c66",
+                "node_type": "virtualbox",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "adapter_type": "Intel PRO/1000 MT Desktop (82540EM)",
+                    "adapters": 1,
+                    "headless": false,
+                    "linked_clone": false,
+                    "on_close": "power_off",
+                    "ram": 1024,
+                    "usage": "",
+                    "use_any_adapter": true,
+                    "vmname": "iPxe_testing"
+                },
+                "symbol": ":/symbols/vbox_guest.svg",
+                "template_id": "6c6e883f-5aad-44f9-806e-905886232629",
+                "width": 65,
+                "x": 420,
+                "y": 0,
                 "z": 1
             }
         ]
     },
     "type": "topology",
     "variables": null,
-    "version": "2.2.11",
+    "version": "2.2.17",
     "zoom": 100
 }
